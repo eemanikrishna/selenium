@@ -9,22 +9,22 @@ public class HandlingAlerts {
 		
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-//		driver.findElement(By.xpath("//button[text()=\"Click for JS Alert\"]")).click();
-//		Thread.sleep(5000);
-//		driver.switchTo().alert().accept();
+		driver.findElement(By.xpath("//button[text()=\"Click for JS Alert\"]")).click();
+		Thread.sleep(5000);
+		driver.switchTo().alert().accept();
 		// ok alert
-//		Alert myAlert = driver.switchTo().alert();
-//		System.out.println(myAlert.getText());
-//		myAlert.accept();
+		Alert myAlert = driver.switchTo().alert();
+		System.out.println(myAlert.getText());
+		myAlert.accept();
 		
 		// ok cancel alert
-//		driver.findElement(By.xpath("//button[text()=\"Click for JS Confirm\"]")).click();
-//		Thread.sleep(5000);
-//		Alert myAlert2 = driver.switchTo().alert();
-//		System.out.println(myAlert2.getText());
-//		myAlert2.accept();
-////		myAlert2.dismiss();
-/// 	
+		driver.findElement(By.xpath("//button[text()=\"Click for JS Confirm\"]")).click();
+		Thread.sleep(5000);
+		Alert myAlert2 = driver.switchTo().alert();
+		System.out.println(myAlert2.getText());
+		myAlert2.accept();
+//		myAlert2.dismiss();
+		
 		// input alert
 		driver.findElement(By.xpath("//button[text()=\"Click for JS Prompt\"]")).click();
 		Thread.sleep(5000); 
@@ -33,3 +33,4 @@ public class HandlingAlerts {
 		myAlert3.accept();
 	}
 }
+
